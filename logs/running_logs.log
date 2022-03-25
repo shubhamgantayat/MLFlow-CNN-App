@@ -1,0 +1,28 @@
+[2022-03-25 19:10:08,994: INFO: stage_01_get_data]: 
+********************
+[2022-03-25 19:10:08,995: INFO: stage_01_get_data]: >>>>> stage STAGE_NAME started <<<<<
+[2022-03-25 19:10:08,996: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-03-25 19:10:08,997: INFO: common]: created directory at: data
+[2022-03-25 19:12:55,701: INFO: stage_01_get_data]: filename: data\data.zip created with info 
+Content-Type: application/octet-stream
+Accept-Ranges: bytes
+Server: Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0
+x-ms-blob-content-md5: l2WJyK3tt5/f2azyQ9eE8w==
+Last-Modified: Sat, 13 Oct 2018 12:14:22 GMT
+ETag: "0x8D6310568FD1DF6"
+Content-Length: 824894548
+Date: Fri, 25 Mar 2022 13:40:09 GMT
+Connection: close
+
+
+[2022-03-25 19:12:55,703: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-03-25 19:12:55,703: INFO: stage_01_get_data]: >>>>> stage STAGE_NAME completed!<<<<<
+
+[2022-03-25 19:19:42,625: INFO: stage_01_get_data]: 
+********************
+[2022-03-25 19:19:42,625: INFO: stage_01_get_data]: >>>>> stage STAGE_NAME started <<<<<
+[2022-03-25 19:19:42,626: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-03-25 19:19:42,626: INFO: common]: created directory at: data
+[2022-03-25 19:19:42,626: INFO: stage_01_get_data]: Already present
+[2022-03-25 19:19:42,626: INFO: stage_01_get_data]: >>>>> stage STAGE_NAME completed!<<<<<
+
