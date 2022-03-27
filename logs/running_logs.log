@@ -26,3 +26,26 @@ Connection: close
 [2022-03-25 19:19:42,626: INFO: stage_01_get_data]: Already present
 [2022-03-25 19:19:42,626: INFO: stage_01_get_data]: >>>>> stage STAGE_NAME completed!<<<<<
 
+[2022-03-27 14:44:54,427: INFO: stage_01_get_data]: 
+********************
+[2022-03-27 14:44:54,428: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2022-03-27 14:44:54,430: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-03-27 14:44:54,430: INFO: common]: created directory at: data
+[2022-03-27 14:44:54,432: INFO: stage_01_get_data]: Already present
+[2022-03-27 14:44:54,433: ERROR: stage_01_get_data]: 'unzip_data_dir'
+Traceback (most recent call last):
+  File "src\stage_01_get_data.py", line 49, in <module>
+    main(config_path=parsed_args.config)
+  File "src\stage_01_get_data.py", line 36, in main
+    unzip_data_dir = config['data']["unzip_data_dir"]
+KeyError: 'unzip_data_dir'
+[2022-03-27 14:45:15,280: INFO: stage_01_get_data]: 
+********************
+[2022-03-27 14:45:15,280: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2022-03-27 14:45:15,281: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-03-27 14:45:15,281: INFO: common]: created directory at: data
+[2022-03-27 14:45:15,281: INFO: stage_01_get_data]: Already present
+[2022-03-27 14:45:15,281: INFO: common]: created directory at: data
+[2022-03-27 14:45:15,281: INFO: common]: Extraction started
+[2022-03-27 14:46:10,285: INFO: stage_01_get_data]: >>>>> stage GET DATA completed!<<<<<
+
