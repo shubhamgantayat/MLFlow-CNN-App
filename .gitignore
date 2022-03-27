@@ -139,5 +139,9 @@ configs/secrets.yaml
 
 # add your env folder here if its there
 mlruns/
-data/
+data/bad_data
+data/PetImages
+data/*.docx
+data/data.zip
+data/*.txt
 logs/
