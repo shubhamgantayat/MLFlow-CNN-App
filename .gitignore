@@ -145,3 +145,4 @@ data/*.docx
 data/data.zip
 data/*.txt
 logs/
+data/model/init_model.h5
