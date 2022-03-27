@@ -32,3 +32,15 @@ conda env export > conda.yaml
 ```
 
 ### STEP 06- commit and push the changes to the remote repository
+
+## MLFlow commands
+
+### Command to run MLProject file
+```bash
+mlflow run . --no-conda
+```
+
+### Run any specific entry point in MLProject file
+```bash
+mlflow run . -e get_data -P config=your_config.yaml --no-conda
+```
