@@ -1,9 +1,14 @@
 import os
 import logging
 import mlflow
+from src.utils.common import create_directories
 
 
-STAGE = "STAGE_NAME" ## <<< change stage name
+STAGE = "MAIN" ## <<< change stage name
+
+create_directories(["logs"])
+# with open(os.path.join("logs", "running_logs.log"), "w") as f:
+#     f.write("")
 
 logging.basicConfig(
     filename=os.path.join("logs", 'running_logs.log'),
@@ -17,6 +22,7 @@ def main():
     with mlflow.start_run() as run:
         mlflow.run(".", "get_data", use_conda=False)
         mlflow.run(".", "base_model_creation", use_conda=False)
+        mlflow.run(".", "training", use_conda=False)
 
 
 if __name__ == '__main__':
