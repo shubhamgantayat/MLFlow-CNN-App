@@ -144,5 +144,5 @@ data/PetImages
 data/*.docx
 data/data.zip
 data/*.txt
-logs/
+logs/running_logs.log
 data/model/init_model.h5
