@@ -49,3 +49,345 @@ KeyError: 'unzip_data_dir'
 [2022-03-27 14:45:15,281: INFO: common]: Extraction started
 [2022-03-27 14:46:10,285: INFO: stage_01_get_data]: >>>>> stage GET DATA completed!<<<<<
 
+[2022-03-27 15:19:34,761: INFO: stage_01_get_data]: 
+********************
+[2022-03-27 15:19:34,762: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2022-03-27 15:19:34,764: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-03-27 15:19:34,764: INFO: common]: created directory at: data
+[2022-03-27 15:19:34,766: INFO: stage_01_get_data]: Already present
+[2022-03-27 15:19:34,766: INFO: common]: created directory at: data
+[2022-03-27 15:19:34,766: INFO: common]: Extraction started
+[2022-03-27 15:20:22,439: ERROR: stage_01_get_data]: 'parent_data_dir'
+Traceback (most recent call last):
+  File "src\stage_01_get_data.py", line 52, in <module>
+    main(config_path=parsed_args.config)
+  File "src\stage_01_get_data.py", line 41, in main
+    validating_image(config)
+  File "c:\users\asus\pycharmprojects\mlflow-cnn-app\src\utils\data_mgmt.py", line 11, in validating_image
+    config["data"]["parent_data_dir"])
+KeyError: 'parent_data_dir'
+[2022-03-27 15:20:53,479: INFO: stage_01_get_data]: 
+********************
+[2022-03-27 15:20:53,479: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2022-03-27 15:20:53,481: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-03-27 15:20:53,482: INFO: common]: created directory at: data
+[2022-03-27 15:20:53,482: INFO: stage_01_get_data]: Already present
+[2022-03-27 15:20:53,482: INFO: common]: created directory at: data
+[2022-03-27 15:20:53,482: INFO: common]: Extraction started
+[2022-03-27 15:21:41,824: ERROR: stage_01_get_data]: [Errno 2] No such file or directory: 'data\\bad_data\\10073.jpg'
+Traceback (most recent call last):
+  File "C:\Users\ASUS\PycharmProjects\MLFlow-CNN-App\env\lib\shutil.py", line 566, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'data\\PetImages\\Cat\\10073.jpg' -> 'data\\bad_data\\10073.jpg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\asus\pycharmprojects\mlflow-cnn-app\src\utils\data_mgmt.py", line 23, in validating_image
+    shutil.move(path_to_img, bad_data_path)
+  File "C:\Users\ASUS\PycharmProjects\MLFlow-CNN-App\env\lib\shutil.py", line 580, in move
+    copy_function(src, real_dst)
+  File "C:\Users\ASUS\PycharmProjects\MLFlow-CNN-App\env\lib\shutil.py", line 266, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\ASUS\PycharmProjects\MLFlow-CNN-App\env\lib\shutil.py", line 121, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: 'data\\bad_data\\10073.jpg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ASUS\PycharmProjects\MLFlow-CNN-App\env\lib\shutil.py", line 566, in move
+    os.rename(src, real_dst)
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'data\\PetImages\\Cat\\10073.jpg' -> 'data\\bad_data\\10073.jpg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "src\stage_01_get_data.py", line 52, in <module>
+    main(config_path=parsed_args.config)
+  File "src\stage_01_get_data.py", line 41, in main
+    validating_image(config)
+  File "c:\users\asus\pycharmprojects\mlflow-cnn-app\src\utils\data_mgmt.py", line 26, in validating_image
+    shutil.move(path_to_img, bad_data_path)
+  File "C:\Users\ASUS\PycharmProjects\MLFlow-CNN-App\env\lib\shutil.py", line 580, in move
+    copy_function(src, real_dst)
+  File "C:\Users\ASUS\PycharmProjects\MLFlow-CNN-App\env\lib\shutil.py", line 266, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\ASUS\PycharmProjects\MLFlow-CNN-App\env\lib\shutil.py", line 121, in copyfile
+    with open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: 'data\\bad_data\\10073.jpg'
+[2022-03-27 15:23:14,831: INFO: stage_01_get_data]: 
+********************
+[2022-03-27 15:23:14,831: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2022-03-27 15:23:14,834: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-03-27 15:23:14,835: INFO: common]: created directory at: data
+[2022-03-27 15:23:14,835: INFO: stage_01_get_data]: Already present
+[2022-03-27 15:23:14,835: INFO: common]: created directory at: data
+[2022-03-27 15:23:14,835: INFO: common]: Extraction started
+[2022-03-27 15:24:07,967: INFO: common]: created directory at: data\bad_data
+[2022-03-27 15:24:08,155: INFO: data_mgmt]: data\PetImages\Cat\10073.jpg is bad
+[2022-03-27 15:24:08,243: INFO: data_mgmt]: data\PetImages\Cat\10125.jpg is bad
+[2022-03-27 15:24:08,902: INFO: data_mgmt]: data\PetImages\Cat\10404.jpg is bad
+[2022-03-27 15:24:09,071: INFO: data_mgmt]: data\PetImages\Cat\10501.jpg is bad
+[2022-03-27 15:24:09,565: INFO: data_mgmt]: data\PetImages\Cat\10820.jpg is bad
+[2022-03-27 15:24:09,651: INFO: data_mgmt]: data\PetImages\Cat\10874.jpg is bad
+[2022-03-27 15:24:10,008: INFO: data_mgmt]: data\PetImages\Cat\11083.jpg is bad
+[2022-03-27 15:24:10,014: INFO: data_mgmt]: data\PetImages\Cat\11086.jpg is bad
+[2022-03-27 15:24:10,026: INFO: data_mgmt]: data\PetImages\Cat\11091.jpg is bad
+[2022-03-27 15:24:10,034: INFO: data_mgmt]: data\PetImages\Cat\11095.jpg is bad
+[2022-03-27 15:24:10,209: INFO: data_mgmt]: data\PetImages\Cat\11196.jpg is bad
+[2022-03-27 15:24:10,236: INFO: data_mgmt]: data\PetImages\Cat\11210.jpg is bad
+[2022-03-27 15:24:10,565: INFO: data_mgmt]: data\PetImages\Cat\11397.jpg is bad
+[2022-03-27 15:24:10,738: INFO: data_mgmt]: data\PetImages\Cat\1151.jpg is bad
+[2022-03-27 15:24:10,822: INFO: data_mgmt]: data\PetImages\Cat\11565.jpg is bad
+[2022-03-27 15:24:10,880: INFO: data_mgmt]: data\PetImages\Cat\11602.jpg is bad
+[2022-03-27 15:24:11,057: INFO: data_mgmt]: data\PetImages\Cat\11729.jpg is bad
+[2022-03-27 15:24:11,274: INFO: data_mgmt]: data\PetImages\Cat\11864.jpg is bad
+[2022-03-27 15:24:11,290: INFO: data_mgmt]: data\PetImages\Cat\11874.jpg is bad
+[2022-03-27 15:24:11,377: INFO: data_mgmt]: data\PetImages\Cat\11935.jpg is bad
+[2022-03-27 15:24:11,575: INFO: data_mgmt]: data\PetImages\Cat\12080.jpg is bad
+[2022-03-27 15:24:11,771: INFO: data_mgmt]: data\PetImages\Cat\12235.jpg is bad
+[2022-03-27 15:24:11,815: INFO: data_mgmt]: data\PetImages\Cat\12269.jpg is bad
+[2022-03-27 15:24:11,958: INFO: data_mgmt]: data\PetImages\Cat\12370.jpg is bad
+[2022-03-27 15:24:12,167: INFO: data_mgmt]: data\PetImages\Cat\1267.jpg is bad
+[2022-03-27 15:24:12,336: INFO: data_mgmt]: data\PetImages\Cat\1386.jpg is bad
+[2022-03-27 15:24:12,359: INFO: data_mgmt]: data\PetImages\Cat\140.jpg is bad
+[2022-03-27 15:24:12,464: INFO: data_mgmt]: data\PetImages\Cat\1476.jpg is bad
+[2022-03-27 15:24:12,479: INFO: data_mgmt]: data\PetImages\Cat\1483.jpg is bad
+[2022-03-27 15:24:12,842: INFO: data_mgmt]: data\PetImages\Cat\1757.jpg is bad
+[2022-03-27 15:24:12,913: INFO: data_mgmt]: data\PetImages\Cat\1815.jpg is bad
+[2022-03-27 15:24:13,036: INFO: data_mgmt]: data\PetImages\Cat\1914.jpg is bad
+[2022-03-27 15:24:13,063: INFO: data_mgmt]: data\PetImages\Cat\1936.jpg is bad
+[2022-03-27 15:24:13,066: INFO: data_mgmt]: data\PetImages\Cat\1937.jpg is bad
+[2022-03-27 15:24:13,173: INFO: data_mgmt]: data\PetImages\Cat\2021.jpg is bad
+[2022-03-27 15:24:13,280: INFO: data_mgmt]: data\PetImages\Cat\2101.jpg is bad
+[2022-03-27 15:24:13,400: INFO: data_mgmt]: data\PetImages\Cat\2189.jpg is bad
+[2022-03-27 15:24:13,551: INFO: data_mgmt]: data\PetImages\Cat\23.jpg is bad
+[2022-03-27 15:24:13,923: INFO: data_mgmt]: data\PetImages\Cat\2569.jpg is bad
+[2022-03-27 15:24:14,075: INFO: data_mgmt]: data\PetImages\Cat\2663.jpg is bad
+[2022-03-27 15:24:14,192: INFO: data_mgmt]: data\PetImages\Cat\2742.jpg is bad
+[2022-03-27 15:24:14,736: INFO: data_mgmt]: data\PetImages\Cat\3089.jpg is bad
+[2022-03-27 15:24:14,861: INFO: data_mgmt]: data\PetImages\Cat\3153.jpg is bad
+[2022-03-27 15:24:14,876: INFO: data_mgmt]: data\PetImages\Cat\3161.jpg is bad
+[2022-03-27 15:24:14,940: INFO: data_mgmt]: data\PetImages\Cat\3197.jpg is bad
+[2022-03-27 15:24:15,123: INFO: data_mgmt]: data\PetImages\Cat\3300.jpg is bad
+[2022-03-27 15:24:15,437: INFO: data_mgmt]: data\PetImages\Cat\3491.jpg is bad
+[2022-03-27 15:24:15,681: INFO: data_mgmt]: data\PetImages\Cat\3649.jpg is bad
+[2022-03-27 15:24:15,784: INFO: data_mgmt]: data\PetImages\Cat\3710.jpg is bad
+[2022-03-27 15:24:16,075: INFO: data_mgmt]: data\PetImages\Cat\391.jpg is bad
+[2022-03-27 15:24:16,163: INFO: data_mgmt]: data\PetImages\Cat\3967.jpg is bad
+[2022-03-27 15:24:16,212: INFO: data_mgmt]: data\PetImages\Cat\4000.jpg is bad
+[2022-03-27 15:24:16,508: INFO: data_mgmt]: data\PetImages\Cat\4165.jpg is bad
+[2022-03-27 15:24:16,717: INFO: data_mgmt]: data\PetImages\Cat\4293.jpg is bad
+[2022-03-27 15:24:16,769: INFO: data_mgmt]: data\PetImages\Cat\4322.jpg is bad
+[2022-03-27 15:24:16,789: INFO: data_mgmt]: data\PetImages\Cat\4334.jpg is bad
+[2022-03-27 15:24:16,819: INFO: data_mgmt]: data\PetImages\Cat\4351.jpg is bad
+[2022-03-27 15:24:16,980: INFO: data_mgmt]: data\PetImages\Cat\445.jpg is bad
+[2022-03-27 15:24:17,262: INFO: data_mgmt]: data\PetImages\Cat\4629.jpg is bad
+[2022-03-27 15:24:17,452: INFO: data_mgmt]: data\PetImages\Cat\4750.jpg is bad
+[2022-03-27 15:24:17,541: INFO: data_mgmt]: data\PetImages\Cat\4821.jpg is bad
+[2022-03-27 15:24:17,553: INFO: data_mgmt]: data\PetImages\Cat\4833.jpg is bad
+[2022-03-27 15:24:17,590: INFO: data_mgmt]: data\PetImages\Cat\4874.jpg is bad
+[2022-03-27 15:24:17,638: INFO: data_mgmt]: data\PetImages\Cat\4929.jpg is bad
+[2022-03-27 15:24:17,752: INFO: data_mgmt]: data\PetImages\Cat\5077.jpg is bad
+[2022-03-27 15:24:17,760: INFO: data_mgmt]: data\PetImages\Cat\5089.jpg is bad
+[2022-03-27 15:24:17,986: INFO: data_mgmt]: data\PetImages\Cat\5370.jpg is bad
+[2022-03-27 15:24:18,121: INFO: data_mgmt]: data\PetImages\Cat\5553.jpg is bad
+[2022-03-27 15:24:18,161: INFO: data_mgmt]: data\PetImages\Cat\5614.jpg is bad
+[2022-03-27 15:24:18,307: INFO: data_mgmt]: data\PetImages\Cat\5819.jpg is bad
+[2022-03-27 15:24:18,460: INFO: data_mgmt]: data\PetImages\Cat\6029.jpg is bad
+[2022-03-27 15:24:18,742: INFO: data_mgmt]: data\PetImages\Cat\6376.jpg is bad
+[2022-03-27 15:24:18,793: INFO: data_mgmt]: data\PetImages\Cat\6435.jpg is bad
+[2022-03-27 15:24:18,798: INFO: data_mgmt]: data\PetImages\Cat\6438.jpg is bad
+[2022-03-27 15:24:18,836: INFO: data_mgmt]: data\PetImages\Cat\6486.jpg is bad
+[2022-03-27 15:24:18,841: INFO: data_mgmt]: data\PetImages\Cat\6491.jpg is bad
+[2022-03-27 15:24:18,937: INFO: data_mgmt]: data\PetImages\Cat\660.jpg is bad
+[2022-03-27 15:24:18,986: INFO: data_mgmt]: data\PetImages\Cat\666.jpg is bad
+[2022-03-27 15:24:19,081: INFO: data_mgmt]: data\PetImages\Cat\6768.jpg is bad
+[2022-03-27 15:24:19,206: INFO: data_mgmt]: data\PetImages\Cat\6900.jpg is bad
+[2022-03-27 15:24:19,214: INFO: data_mgmt]: data\PetImages\Cat\6906.jpg is bad
+[2022-03-27 15:24:19,286: INFO: data_mgmt]: data\PetImages\Cat\6980.jpg is bad
+[2022-03-27 15:24:19,329: INFO: data_mgmt]: data\PetImages\Cat\7003.jpg is bad
+[2022-03-27 15:24:19,599: INFO: data_mgmt]: data\PetImages\Cat\7245.jpg is bad
+[2022-03-27 15:24:19,788: INFO: data_mgmt]: data\PetImages\Cat\7441.jpg is bad
+[2022-03-27 15:24:19,829: INFO: data_mgmt]: data\PetImages\Cat\7487.jpg is bad
+[2022-03-27 15:24:19,844: INFO: data_mgmt]: data\PetImages\Cat\7502.jpg is bad
+[2022-03-27 15:24:19,960: INFO: data_mgmt]: data\PetImages\Cat\7642.jpg is bad
+[2022-03-27 15:24:19,967: INFO: data_mgmt]: data\PetImages\Cat\7647.jpg is bad
+[2022-03-27 15:24:20,089: INFO: data_mgmt]: data\PetImages\Cat\780.jpg is bad
+[2022-03-27 15:24:20,127: INFO: data_mgmt]: data\PetImages\Cat\7845.jpg is bad
+[2022-03-27 15:24:20,227: INFO: data_mgmt]: data\PetImages\Cat\7968.jpg is bad
+[2022-03-27 15:24:20,237: INFO: data_mgmt]: data\PetImages\Cat\7978.jpg is bad
+[2022-03-27 15:24:20,297: INFO: data_mgmt]: data\PetImages\Cat\8054.jpg is bad
+[2022-03-27 15:24:20,377: INFO: data_mgmt]: data\PetImages\Cat\8157.jpg is bad
+[2022-03-27 15:24:20,398: INFO: data_mgmt]: data\PetImages\Cat\8183.jpg is bad
+[2022-03-27 15:24:20,482: INFO: data_mgmt]: data\PetImages\Cat\8295.jpg is bad
+[2022-03-27 15:24:20,510: INFO: data_mgmt]: data\PetImages\Cat\8335.jpg is bad
+[2022-03-27 15:24:20,582: INFO: data_mgmt]: data\PetImages\Cat\8415.jpg is bad
+[2022-03-27 15:24:20,631: INFO: data_mgmt]: data\PetImages\Cat\8470.jpg is bad
+[2022-03-27 15:24:20,670: INFO: data_mgmt]: data\PetImages\Cat\850.jpg is bad
+[2022-03-27 15:24:20,727: INFO: data_mgmt]: data\PetImages\Cat\8553.jpg is bad
+[2022-03-27 15:24:20,965: INFO: data_mgmt]: data\PetImages\Cat\8832.jpg is bad
+[2022-03-27 15:24:21,139: INFO: data_mgmt]: data\PetImages\Cat\8958.jpg is bad
+[2022-03-27 15:24:21,272: INFO: data_mgmt]: data\PetImages\Cat\910.jpg is bad
+[2022-03-27 15:24:21,274: INFO: data_mgmt]: data\PetImages\Cat\9100.jpg is bad
+[2022-03-27 15:24:21,349: INFO: data_mgmt]: data\PetImages\Cat\9171.jpg is bad
+[2022-03-27 15:24:21,386: INFO: data_mgmt]: data\PetImages\Cat\9208.jpg is bad
+[2022-03-27 15:24:21,426: INFO: data_mgmt]: data\PetImages\Cat\925.jpg is bad
+[2022-03-27 15:24:21,490: INFO: data_mgmt]: data\PetImages\Cat\9328.jpg is bad
+[2022-03-27 15:24:21,523: INFO: data_mgmt]: data\PetImages\Cat\936.jpg is bad
+[2022-03-27 15:24:21,525: INFO: data_mgmt]: data\PetImages\Cat\9361.jpg is bad
+[2022-03-27 15:24:21,699: INFO: data_mgmt]: data\PetImages\Cat\9565.jpg is bad
+[2022-03-27 15:24:21,743: INFO: data_mgmt]: data\PetImages\Cat\9619.jpg is bad
+[2022-03-27 15:24:21,872: INFO: data_mgmt]: data\PetImages\Cat\9778.jpg is bad
+[2022-03-27 15:24:22,064: INFO: data_mgmt]: data\PetImages\Cat\Thumbs.db is bad
+[2022-03-27 15:24:22,209: INFO: data_mgmt]: data\PetImages\Dog\10158.jpg is bad
+[2022-03-27 15:24:22,215: INFO: data_mgmt]: data\PetImages\Dog\10163.jpg is bad
+[2022-03-27 15:24:22,220: INFO: data_mgmt]: data\PetImages\Dog\1017.jpg is bad
+[2022-03-27 15:24:22,224: INFO: data_mgmt]: data\PetImages\Dog\10173.jpg is bad
+[2022-03-27 15:24:22,353: INFO: data_mgmt]: data\PetImages\Dog\10351.jpg is bad
+[2022-03-27 15:24:22,355: INFO: data_mgmt]: data\PetImages\Dog\10353.jpg is bad
+[2022-03-27 15:24:22,380: INFO: data_mgmt]: data\PetImages\Dog\10383.jpg is bad
+[2022-03-27 15:24:22,396: INFO: data_mgmt]: data\PetImages\Dog\10401.jpg is bad
+[2022-03-27 15:24:22,572: INFO: data_mgmt]: data\PetImages\Dog\10637.jpg is bad
+[2022-03-27 15:24:22,603: INFO: data_mgmt]: data\PetImages\Dog\10678.jpg is bad
+[2022-03-27 15:24:22,624: INFO: data_mgmt]: data\PetImages\Dog\10705.jpg is bad
+[2022-03-27 15:24:22,640: INFO: data_mgmt]: data\PetImages\Dog\10726.jpg is bad
+[2022-03-27 15:24:22,647: INFO: data_mgmt]: data\PetImages\Dog\10733.jpg is bad
+[2022-03-27 15:24:22,656: INFO: data_mgmt]: data\PetImages\Dog\10745.jpg is bad
+[2022-03-27 15:24:22,659: INFO: data_mgmt]: data\PetImages\Dog\10747.jpg is bad
+[2022-03-27 15:24:22,696: INFO: data_mgmt]: data\PetImages\Dog\10797.jpg is bad
+[2022-03-27 15:24:22,744: INFO: data_mgmt]: data\PetImages\Dog\10863.jpg is bad
+[2022-03-27 15:24:22,776: INFO: data_mgmt]: data\PetImages\Dog\10907.jpg is bad
+[2022-03-27 15:24:22,807: INFO: data_mgmt]: data\PetImages\Dog\10949.jpg is bad
+[2022-03-27 15:24:22,823: INFO: data_mgmt]: data\PetImages\Dog\10969.jpg is bad
+[2022-03-27 15:24:22,827: INFO: data_mgmt]: data\PetImages\Dog\10972.jpg is bad
+[2022-03-27 15:24:22,971: INFO: data_mgmt]: data\PetImages\Dog\11166.jpg is bad
+[2022-03-27 15:24:22,975: INFO: data_mgmt]: data\PetImages\Dog\1117.jpg is bad
+[2022-03-27 15:24:23,026: INFO: data_mgmt]: data\PetImages\Dog\11233.jpg is bad
+[2022-03-27 15:24:23,044: INFO: data_mgmt]: data\PetImages\Dog\11253.jpg is bad
+[2022-03-27 15:24:23,185: INFO: data_mgmt]: data\PetImages\Dog\11410.jpg is bad
+[2022-03-27 15:24:23,308: INFO: data_mgmt]: data\PetImages\Dog\11560.jpg is bad
+[2022-03-27 15:24:23,334: INFO: data_mgmt]: data\PetImages\Dog\11590.jpg is bad
+[2022-03-27 15:24:23,420: INFO: data_mgmt]: data\PetImages\Dog\11675.jpg is bad
+[2022-03-27 15:24:23,423: INFO: data_mgmt]: data\PetImages\Dog\1168.jpg is bad
+[2022-03-27 15:24:23,436: INFO: data_mgmt]: data\PetImages\Dog\11692.jpg is bad
+[2022-03-27 15:24:23,448: INFO: data_mgmt]: data\PetImages\Dog\11702.jpg is bad
+[2022-03-27 15:24:23,573: INFO: data_mgmt]: data\PetImages\Dog\11849.jpg is bad
+[2022-03-27 15:24:23,580: INFO: data_mgmt]: data\PetImages\Dog\11853.jpg is bad
+[2022-03-27 15:24:23,630: INFO: data_mgmt]: data\PetImages\Dog\11912.jpg is bad
+[2022-03-27 15:24:23,818: INFO: data_mgmt]: data\PetImages\Dog\12102.jpg is bad
+[2022-03-27 15:24:23,830: INFO: data_mgmt]: data\PetImages\Dog\12114.jpg is bad
+[2022-03-27 15:24:24,006: INFO: data_mgmt]: data\PetImages\Dog\12289.jpg is bad
+[2022-03-27 15:24:24,204: INFO: data_mgmt]: data\PetImages\Dog\1259.jpg is bad
+[2022-03-27 15:24:24,253: INFO: data_mgmt]: data\PetImages\Dog\1308.jpg is bad
+[2022-03-27 15:24:24,300: INFO: data_mgmt]: data\PetImages\Dog\1356.jpg is bad
+[2022-03-27 15:24:24,717: INFO: data_mgmt]: data\PetImages\Dog\1866.jpg is bad
+[2022-03-27 15:24:24,732: INFO: data_mgmt]: data\PetImages\Dog\1884.jpg is bad
+[2022-03-27 15:24:24,749: INFO: data_mgmt]: data\PetImages\Dog\1900.jpg is bad
+[2022-03-27 15:24:25,062: INFO: data_mgmt]: data\PetImages\Dog\2317.jpg is bad
+[2022-03-27 15:24:25,079: INFO: data_mgmt]: data\PetImages\Dog\2339.jpg is bad
+[2022-03-27 15:24:25,089: INFO: data_mgmt]: data\PetImages\Dog\2353.jpg is bad
+[2022-03-27 15:24:25,112: INFO: data_mgmt]: data\PetImages\Dog\2384.jpg is bad
+[2022-03-27 15:24:25,190: INFO: data_mgmt]: data\PetImages\Dog\2479.jpg is bad
+[2022-03-27 15:24:25,203: INFO: data_mgmt]: data\PetImages\Dog\2494.jpg is bad
+[2022-03-27 15:24:25,336: INFO: data_mgmt]: data\PetImages\Dog\2688.jpg is bad
+[2022-03-27 15:24:25,477: INFO: data_mgmt]: data\PetImages\Dog\2877.jpg is bad
+[2022-03-27 15:24:25,500: INFO: data_mgmt]: data\PetImages\Dog\2905.jpg is bad
+[2022-03-27 15:24:25,512: INFO: data_mgmt]: data\PetImages\Dog\2915.jpg is bad
+[2022-03-27 15:24:25,550: INFO: data_mgmt]: data\PetImages\Dog\296.jpg is bad
+[2022-03-27 15:24:25,610: INFO: data_mgmt]: data\PetImages\Dog\3038.jpg is bad
+[2022-03-27 15:24:25,682: INFO: data_mgmt]: data\PetImages\Dog\3136.jpg is bad
+[2022-03-27 15:24:25,697: INFO: data_mgmt]: data\PetImages\Dog\3155.jpg is bad
+[2022-03-27 15:24:25,773: INFO: data_mgmt]: data\PetImages\Dog\3252.jpg is bad
+[2022-03-27 15:24:25,803: INFO: data_mgmt]: data\PetImages\Dog\3288.jpg is bad
+[2022-03-27 15:24:25,832: INFO: data_mgmt]: data\PetImages\Dog\3320.jpg is bad
+[2022-03-27 15:24:26,012: INFO: data_mgmt]: data\PetImages\Dog\3546.jpg is bad
+[2022-03-27 15:24:26,051: INFO: data_mgmt]: data\PetImages\Dog\3588.jpg is bad
+[2022-03-27 15:24:26,276: INFO: data_mgmt]: data\PetImages\Dog\3885.jpg is bad
+[2022-03-27 15:24:26,308: INFO: data_mgmt]: data\PetImages\Dog\3927.jpg is bad
+[2022-03-27 15:24:26,425: INFO: data_mgmt]: data\PetImages\Dog\4086.jpg is bad
+[2022-03-27 15:24:26,463: INFO: data_mgmt]: data\PetImages\Dog\4134.jpg is bad
+[2022-03-27 15:24:26,467: INFO: data_mgmt]: data\PetImages\Dog\414.jpg is bad
+[2022-03-27 15:24:26,519: INFO: data_mgmt]: data\PetImages\Dog\4203.jpg is bad
+[2022-03-27 15:24:26,562: INFO: data_mgmt]: data\PetImages\Dog\4257.jpg is bad
+[2022-03-27 15:24:26,595: INFO: data_mgmt]: data\PetImages\Dog\4301.jpg is bad
+[2022-03-27 15:24:26,641: INFO: data_mgmt]: data\PetImages\Dog\4367.jpg is bad
+[2022-03-27 15:24:26,749: INFO: data_mgmt]: data\PetImages\Dog\4515.jpg is bad
+[2022-03-27 15:24:26,835: INFO: data_mgmt]: data\PetImages\Dog\4640.jpg is bad
+[2022-03-27 15:24:26,845: INFO: data_mgmt]: data\PetImages\Dog\4654.jpg is bad
+[2022-03-27 15:24:26,990: INFO: data_mgmt]: data\PetImages\Dog\4855.jpg is bad
+[2022-03-27 15:24:27,043: INFO: data_mgmt]: data\PetImages\Dog\4924.jpg is bad
+[2022-03-27 15:24:27,097: INFO: data_mgmt]: data\PetImages\Dog\50.jpg is bad
+[2022-03-27 15:24:27,174: INFO: data_mgmt]: data\PetImages\Dog\5104.jpg is bad
+[2022-03-27 15:24:27,254: INFO: data_mgmt]: data\PetImages\Dog\522.jpg is bad
+[2022-03-27 15:24:27,271: INFO: data_mgmt]: data\PetImages\Dog\5243.jpg is bad
+[2022-03-27 15:24:27,285: INFO: data_mgmt]: data\PetImages\Dog\5263.jpg is bad
+[2022-03-27 15:24:27,400: INFO: data_mgmt]: data\PetImages\Dog\543.jpg is bad
+[2022-03-27 15:24:27,489: INFO: data_mgmt]: data\PetImages\Dog\5547.jpg is bad
+[2022-03-27 15:24:27,532: INFO: data_mgmt]: data\PetImages\Dog\5604.jpg is bad
+[2022-03-27 15:24:27,536: INFO: data_mgmt]: data\PetImages\Dog\561.jpg is bad
+[2022-03-27 15:24:27,546: INFO: data_mgmt]: data\PetImages\Dog\5618.jpg is bad
+[2022-03-27 15:24:27,574: INFO: data_mgmt]: data\PetImages\Dog\565.jpg is bad
+[2022-03-27 15:24:27,639: INFO: data_mgmt]: data\PetImages\Dog\573.jpg is bad
+[2022-03-27 15:24:27,640: INFO: data_mgmt]: data\PetImages\Dog\5730.jpg is bad
+[2022-03-27 15:24:27,646: INFO: data_mgmt]: data\PetImages\Dog\5736.jpg is bad
+[2022-03-27 15:24:27,687: INFO: data_mgmt]: data\PetImages\Dog\5790.jpg is bad
+[2022-03-27 15:24:27,694: INFO: data_mgmt]: data\PetImages\Dog\5797.jpg is bad
+[2022-03-27 15:24:27,820: INFO: data_mgmt]: data\PetImages\Dog\5955.jpg is bad
+[2022-03-27 15:24:27,886: INFO: data_mgmt]: data\PetImages\Dog\6032.jpg is bad
+[2022-03-27 15:24:27,912: INFO: data_mgmt]: data\PetImages\Dog\6059.jpg is bad
+[2022-03-27 15:24:27,940: INFO: data_mgmt]: data\PetImages\Dog\6086.jpg is bad
+[2022-03-27 15:24:28,050: INFO: data_mgmt]: data\PetImages\Dog\6213.jpg is bad
+[2022-03-27 15:24:28,072: INFO: data_mgmt]: data\PetImages\Dog\6238.jpg is bad
+[2022-03-27 15:24:28,132: INFO: data_mgmt]: data\PetImages\Dog\6305.jpg is bad
+[2022-03-27 15:24:28,247: INFO: data_mgmt]: data\PetImages\Dog\6430.jpg is bad
+[2022-03-27 15:24:28,315: INFO: data_mgmt]: data\PetImages\Dog\6500.jpg is bad
+[2022-03-27 15:24:28,318: INFO: data_mgmt]: data\PetImages\Dog\6503.jpg is bad
+[2022-03-27 15:24:28,367: INFO: data_mgmt]: data\PetImages\Dog\6555.jpg is bad
+[2022-03-27 15:24:28,435: INFO: data_mgmt]: data\PetImages\Dog\663.jpg is bad
+[2022-03-27 15:24:28,525: INFO: data_mgmt]: data\PetImages\Dog\6718.jpg is bad
+[2022-03-27 15:24:28,653: INFO: data_mgmt]: data\PetImages\Dog\6855.jpg is bad
+[2022-03-27 15:24:28,697: INFO: data_mgmt]: data\PetImages\Dog\6904.jpg is bad
+[2022-03-27 15:24:28,862: INFO: data_mgmt]: data\PetImages\Dog\7083.jpg is bad
+[2022-03-27 15:24:28,888: INFO: data_mgmt]: data\PetImages\Dog\7112.jpg is bad
+[2022-03-27 15:24:28,904: INFO: data_mgmt]: data\PetImages\Dog\7128.jpg is bad
+[2022-03-27 15:24:28,910: INFO: data_mgmt]: data\PetImages\Dog\7133.jpg is bad
+[2022-03-27 15:24:28,959: INFO: data_mgmt]: data\PetImages\Dog\719.jpg is bad
+[2022-03-27 15:24:29,068: INFO: data_mgmt]: data\PetImages\Dog\7311.jpg is bad
+[2022-03-27 15:24:29,118: INFO: data_mgmt]: data\PetImages\Dog\7369.jpg is bad
+[2022-03-27 15:24:29,194: INFO: data_mgmt]: data\PetImages\Dog\7459.jpg is bad
+[2022-03-27 15:24:29,227: INFO: data_mgmt]: data\PetImages\Dog\7496.jpg is bad
+[2022-03-27 15:24:29,357: INFO: data_mgmt]: data\PetImages\Dog\7652.jpg is bad
+[2022-03-27 15:24:29,414: INFO: data_mgmt]: data\PetImages\Dog\7718.jpg is bad
+[2022-03-27 15:24:29,423: INFO: data_mgmt]: data\PetImages\Dog\7729.jpg is bad
+[2022-03-27 15:24:29,433: INFO: data_mgmt]: data\PetImages\Dog\7739.jpg is bad
+[2022-03-27 15:24:29,437: INFO: data_mgmt]: data\PetImages\Dog\7743.jpg is bad
+[2022-03-27 15:24:29,628: INFO: data_mgmt]: data\PetImages\Dog\7969.jpg is bad
+[2022-03-27 15:24:29,646: INFO: data_mgmt]: data\PetImages\Dog\7989.jpg is bad
+[2022-03-27 15:24:29,764: INFO: data_mgmt]: data\PetImages\Dog\8126.jpg is bad
+[2022-03-27 15:24:29,821: INFO: data_mgmt]: data\PetImages\Dog\8194.jpg is bad
+[2022-03-27 15:24:29,977: INFO: data_mgmt]: data\PetImages\Dog\8364.jpg is bad
+[2022-03-27 15:24:30,118: INFO: data_mgmt]: data\PetImages\Dog\8521.jpg is bad
+[2022-03-27 15:24:30,148: INFO: data_mgmt]: data\PetImages\Dog\8557.jpg is bad
+[2022-03-27 15:24:30,153: INFO: data_mgmt]: data\PetImages\Dog\8563.jpg is bad
+[2022-03-27 15:24:30,238: INFO: data_mgmt]: data\PetImages\Dog\8641.jpg is bad
+[2022-03-27 15:24:30,281: INFO: data_mgmt]: data\PetImages\Dog\8693.jpg is bad
+[2022-03-27 15:24:30,301: INFO: data_mgmt]: data\PetImages\Dog\8715.jpg is bad
+[2022-03-27 15:24:30,314: INFO: data_mgmt]: data\PetImages\Dog\8730.jpg is bad
+[2022-03-27 15:24:30,572: INFO: data_mgmt]: data\PetImages\Dog\9026.jpg is bad
+[2022-03-27 15:24:30,601: INFO: data_mgmt]: data\PetImages\Dog\9043.jpg is bad
+[2022-03-27 15:24:30,685: INFO: data_mgmt]: data\PetImages\Dog\9145.jpg is bad
+[2022-03-27 15:24:30,720: INFO: data_mgmt]: data\PetImages\Dog\9188.jpg is bad
+[2022-03-27 15:24:30,859: INFO: data_mgmt]: data\PetImages\Dog\9367.jpg is bad
+[2022-03-27 15:24:30,896: INFO: data_mgmt]: data\PetImages\Dog\9414.jpg is bad
+[2022-03-27 15:24:30,962: INFO: data_mgmt]: data\PetImages\Dog\9500.jpg is bad
+[2022-03-27 15:24:31,011: INFO: data_mgmt]: data\PetImages\Dog\9556.jpg is bad
+[2022-03-27 15:24:31,079: INFO: data_mgmt]: data\PetImages\Dog\9640.jpg is bad
+[2022-03-27 15:24:31,082: INFO: data_mgmt]: data\PetImages\Dog\9643.jpg is bad
+[2022-03-27 15:24:31,239: INFO: data_mgmt]: data\PetImages\Dog\9851.jpg is bad
+[2022-03-27 15:24:31,329: INFO: data_mgmt]: data\PetImages\Dog\9961.jpg is bad
+[2022-03-27 15:24:31,334: INFO: data_mgmt]: data\PetImages\Dog\9967.jpg is bad
+[2022-03-27 15:24:31,408: INFO: data_mgmt]: data\PetImages\Dog\Thumbs.db is bad
+[2022-03-27 15:24:31,408: INFO: stage_01_get_data]: >>>>> stage GET DATA completed!<<<<<
+
