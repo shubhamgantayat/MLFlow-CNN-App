@@ -63,9 +63,12 @@ def main(config_path):
     logging.info(f"Load the base model from {path_to_model}")
     classifier = tf.keras.models.load_model(path_to_model)
 
+    #Early Stopping
+    early_stop = tf.keras.callbacks.EarlyStopping(patience=2, verbose=3, restore_best_weights=True)
+
     # training
     logging.info(f"training started")
-    classifier.fit(train_ds, epochs=params["epochs"], validation_data=val_ds)
+    classifier.fit(train_ds, epochs=params["epochs"], validation_data=val_ds, callbacks=[early_stop])
 
     # save the model
     path_to_trained_model = os.path.join(path_to_model_dir, config["data"]["trained_model_file"])

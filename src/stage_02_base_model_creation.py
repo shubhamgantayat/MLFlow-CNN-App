@@ -23,21 +23,28 @@ def main(config_path):
     ## read config files
     config = read_yaml(config_path)
     params = config['params']
-    LAYERS = [
-        tf.keras.layers.Conv2D(32, (3, 3), input_shape=tuple(params["img_shape"]), activation="relu"),
-        tf.keras.layers.MaxPool2D(pool_size=(2, 2)),
-        tf.keras.layers.Conv2D(32, (3, 3), activation="relu"),
-        tf.keras.layers.MaxPool2D(pool_size=(2, 2)),
-        tf.keras.layers.Flatten(),
-        tf.keras.layers.Dense(128, activation="relu"),
-        tf.keras.layers.Dense(2, activation="softmax")
-    ]
+    # LAYERS = [
+    #     tf.keras.layers.Conv2D(32, (3, 3), input_shape=tuple(params["img_shape"]), activation="relu"),
+    #     tf.keras.layers.MaxPool2D(pool_size=(2, 2)),
+    #     tf.keras.layers.Conv2D(32, (3, 3), activation="relu"),
+    #     tf.keras.layers.MaxPool2D(pool_size=(2, 2)),
+    #     tf.keras.layers.Flatten(),
+    #     tf.keras.layers.Dense(128, activation="relu"),
+    #     tf.keras.layers.Dense(2, activation="softmax")
+    # ]
 
-    classifier = tf.keras.Sequential(LAYERS)
+    base_model = tf.keras.applications.xception.Xception(weights="imagenet", include_top=False)
+    avg = tf.keras.layers.GlobalAveragePooling2D()(base_model.output)
+    output = tf.keras.layers.Dense(2, activation="softmax")(avg)
+    classifier = tf.keras.Model(inputs=base_model.input, outputs=output)
+    for layer in base_model.layers:
+        layer.trainable = False
+
+
+    # classifier = tf.keras.Sequential(LAYERS)
     logging.info(f"base model summary : \n {log_model_summary(classifier)}")
-    classifier.compile(optimizer=tf.keras.optimizers.Adam(params["lr"]),
-                       loss=params["loss"],
-                       metrics=params["metrics"])
+    optimizer = tf.keras.optimizers.SGD(learning_rate=params["lr"], momentum=0.9, decay=0.01)
+    classifier.compile(loss="sparse_categorical_crossentropy", optimizer=optimizer, metrics=["accuracy"])
 
     path_to_model_dir = os.path.join(config["data"]["local_dir"], config["data"]["model_dir"])
     create_directories([path_to_model_dir])
